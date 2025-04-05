@@ -21,3 +21,7 @@ RESTful API endpoints for managing managing backend:
 - **Base URL**: `https://todo-backendd-hdpm.onrender.com/`
 - **Request Payload**: For POST and PUT, send `{ "title": "task name", "completed": false }`.
 - **Response Format**: JSON, e.g., `{ "id": 1, "title": "Buy groceries", "completed": false }`.
+
+
+## NOTE:
+** debug = True is turned ON **
