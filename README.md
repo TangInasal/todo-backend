@@ -24,4 +24,4 @@ RESTful API endpoints for managing managing backend:
 
 
 ## NOTE:
-** debug = True is turned ON **
+ debug = True is turned ON 
