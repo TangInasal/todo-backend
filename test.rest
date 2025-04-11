@@ -1,0 +1,7 @@
+POST https://todo-backendd-hdpm.onrender.com/api-token-auth/
+Content-Type: application/json
+
+{
+    "username": "your_username",
+    "password": "your_password"
+}
