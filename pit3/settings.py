@@ -146,7 +146,8 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOW_CREDENTIALS = True
-CSRF_TRUSTED_ORIGINS = ['https://todo-backendd-hdpm.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://todo-backendd-hdpm.onrender.com',
+                        'http://127.0.0.1:5173']
 # Tell Django to use the X-Forwarded-Host header set by the proxy
 USE_X_FORWARDED_HOST = True
 
