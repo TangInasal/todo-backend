@@ -17,6 +17,7 @@ RESTful API endpoints for managing managing backend:
 | POST   | `/api/v1/todo/create/`                     | Create a new task          |
 | PUT    | `/api/v1/todo/<id>/` (e.g., `/api/v1/todo/2/`) | Update a task by ID        |
 | DELETE | `/api/v1/todo/<id>/` (e.g., `/api/v1/todo/2/`) | Delete a task by ID        |
+| POST    | `/api-token-auth`                             | Get user token              |
 
 - **Base URL**: `https://todo-backendd-hdpm.onrender.com/`
 - **Request Payload**: For POST and PUT, send `{ "title": "task name", "completed": false }`.
