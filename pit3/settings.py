@@ -96,14 +96,7 @@ DATABASES = {
     }
 }
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
-}
+DATABASES["default"] = dj_database_url.parse("postgresql://todo_backend_postgres_user:RjZpTQtSnuJy1wmalFni7qWATfH0964E@dpg-cvnthq9r0fns73ehbdj0-a/todo_backend_postgres")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -151,4 +144,16 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5173',
     'https://todo-frontend-kv7x.onrender.com'
 ]
+
 CORS_ALLOW_CREDENTIALS = True
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
