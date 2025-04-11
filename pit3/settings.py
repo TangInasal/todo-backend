@@ -96,7 +96,7 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgresql://todo_backend_postgres_user:RjZpTQtSnuJy1wmalFni7qWATfH0964E@dpg-cvnthq9r0fns73ehbdj0-a/todo_backend_postgres")
+#DATABASES["default"] = dj_database_url.parse("postgresql://todo_backend_postgres_user:RjZpTQtSnuJy1wmalFni7qWATfH0964E@dpg-cvnthq9r0fns73ehbdj0-a/todo_backend_postgres")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -142,12 +142,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
-    'https://todo-frontend-kv7x.onrender.com',
-    '172.27.10.104'
+    'https://todo-frontend-kv7x.onrender.com'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = ['https://todo-backendd-hdpm.onrender.com']
+# Tell Django to use the X-Forwarded-Host header set by the proxy
+USE_X_FORWARDED_HOST = True
+
+# Tell Django to recognize the request as secure (https) when the proxy sets X-Forwarded-Proto to 'https'
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 REST_FRAMEWORK = {
